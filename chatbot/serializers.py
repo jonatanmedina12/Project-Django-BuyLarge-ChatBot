@@ -1,4 +1,3 @@
-# chatbot/serializers.py
 from rest_framework import serializers
 from .models import Conversation, Message
 
@@ -14,4 +13,4 @@ class ConversationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Conversation
-        fields = ['id', 'user', 'session_id', 'created_at', 'messages']
+        fields = ['id', 'session_id', 'created_at', 'messages']

@@ -21,10 +21,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('products.urls')),
-    path('', include('chatbot.urls')),
+    path('api/', include([
+        path('products/', include('products.urls')),
+        path('chatbot/', include('chatbot.urls')),
+    ])),
 ]
 
 # Para servir archivos de medios en desarrollo

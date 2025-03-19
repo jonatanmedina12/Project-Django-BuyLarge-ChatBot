@@ -7,6 +7,7 @@ router.register(r'categories', CategoryViewSet)
 router.register(r'brands', BrandViewSet)
 router.register(r'products', ProductViewSet)
 
+# Remove the 'api/' prefix as it's already provided in the main urls.py
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
 ]

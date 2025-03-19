@@ -1,4 +1,3 @@
-# Dockerfile para el proyecto Django
 FROM python:3.9-slim
 
 WORKDIR /app
@@ -22,4 +21,5 @@ COPY . /app/
 
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# No se ejecutará directamente, ahora usaremos un script de inicio
+CMD ["./entrypoint.sh"]
